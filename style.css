@@ -58,15 +58,21 @@ main {
   width: 100%;
 }
 
+.first {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
 .intro {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 100vh;
-  min-height: 100svh;
-  padding: 40px 20px;
+  padding: 36px 20px 24px;
   text-align: center;
   color: #fefaf1;
 }
@@ -104,9 +110,11 @@ main {
 
 .hero {
   display: block;
+  flex-shrink: 0;
   width: 100%;
-  height: 100vh;
-  height: 100svh;
+  height: auto;
+  max-height: 72vh;
+  max-height: 72svh;
   object-fit: cover;
   object-position: center;
   background: var(--bg);
@@ -217,12 +225,6 @@ dd {
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.01em;
-}
-
-@media (orientation: portrait) {
-  .hero {
-    object-fit: contain;
-  }
 }
 
 @media (max-width: 420px) {
