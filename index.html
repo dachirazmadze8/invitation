@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spooky Shift</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <img class="hero" src="spooky%20shift.jpg" alt="Spooky Shift invitation">
+
+  <div class="content">
+    <section aria-label="Countdown to the event">
+      <div class="timer" id="timer" role="timer" aria-live="off">
+        <div class="unit"><b id="d">0</b><span>days</span></div>
+        <div class="unit"><b id="h">00</b><span>hours</span></div>
+        <div class="unit"><b id="m">00</b><span>minutes</span></div>
+        <div class="unit"><b id="s">00</b><span>seconds</span></div>
+      </div>
+      <div class="started" id="started">The event has started. See you there!</div>
+    </section>
+
+    <section class="details" aria-label="Event details">
+      <dl>
+        <div><dt>Date</dt><dd id="dateText"></dd></div>
+        <div><dt>Starts at</dt><dd id="timeText"></dd></div>
+        <div><dt>Location</dt><dd id="place"></dd></div>
+      </dl>
+    </section>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
