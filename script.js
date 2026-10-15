@@ -1,6 +1,6 @@
 // ---- Edit these two lines to change the event ----
 var EVENT_START = new Date("2026-10-30T10:00:00"); // local time of the viewer
-var LOCATION = "123 Example Street, Your City";
+var LOCATION = "129 D.Agmashenebeli Alley";
 // --------------------------------------------------
 
 document.getElementById("place").textContent = LOCATION;
