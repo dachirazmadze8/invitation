@@ -39,6 +39,24 @@
         <div><dt>Location</dt><dd id="place"></dd></div>
       </dl>
     </section>
+
+    <section class="rsvp" aria-label="RSVP">
+      <div class="fields">
+        <label for="firstName">First name
+          <input type="text" id="firstName" autocomplete="given-name">
+        </label>
+        <label for="lastName">Last name
+          <input type="text" id="lastName" autocomplete="family-name">
+        </label>
+      </div>
+
+      <p class="ask" id="ask">Are you coming to the event?</p>
+      <div class="choices" role="group" aria-labelledby="ask">
+        <button type="button" class="yes" id="yes">Yes</button>
+        <button type="button" class="no" id="no">No</button>
+      </div>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    </section>
   </div>
 </main>
 
