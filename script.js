@@ -1,6 +1,6 @@
 // ---- Edit these three lines to change the event ----
 var EVENT_START = new Date("2026-11-14T19:00:00"); // local time of the viewer
-var LOCATION = "123 Example Street, Your City";
+var LOCATION = "129 D.agmashenebeli alley";
 var RSVP_EMAIL = "42186fd7cf45882c4f9270426a0ea884"; // replies are sent to this address
 // --------------------------------------------------
 
