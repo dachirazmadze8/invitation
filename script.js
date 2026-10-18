@@ -1,8 +1,7 @@
-// ---- Edit these three lines to change the event ----
-var EVENT_START = new Date("2026-10-31T00:00:00"); // local time of the viewer
+var EVENT_START = new Date("2026-10-31T00:00:00");
 var LOCATION = "129 D.agmashenebeli alley";
-var RSVP_EMAIL = "razmadzedachi@gmail.com"; // replies are sent to this address
-// --------------------------------------------------
+var RSVP_EMAIL = "razmadzedachi@gmail.com";
+
 
 document.getElementById("place").textContent = LOCATION;
 document.getElementById("dateText").textContent =
@@ -26,7 +25,6 @@ function tick(){
 }
 tick(); setInterval(tick, 1000);
 
-// ---- RSVP ----
 var firstInput = document.getElementById("firstName");
 var lastInput = document.getElementById("lastName");
 var yesBtn = document.getElementById("yes");
