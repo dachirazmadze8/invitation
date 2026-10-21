@@ -1,6 +1,6 @@
 var EVENT_START = new Date("2026-10-30T10:00:00");
 var LOCATION = "თეგეტას სათავო ოფისი";
-var RSVP_EMAIL = "tmikhelidze@gmail.com";
+var RSVP_URL = "https://script.google.com/macros/s/AKfycbz7zt0GY6szetGx8fUREdVZji5dDxm2lJ5Ohh3bqA66VPvZqBBh2mBBU4T9xlIcYZzK/exec";
 
 
 document.getElementById("place").textContent = LOCATION;
@@ -46,27 +46,21 @@ function rsvp(coming){
     (first ? lastInput : firstInput).focus();
     return;
   }
-  if (RSVP_EMAIL.indexOf("example.com") !== -1){
+  if (RSVP_URL.indexOf("YOUR_ID") !== -1){
     msg.className = "msg error";
-    msg.textContent = "RSVP email isn't set up yet.";
+    msg.textContent = "RSVP destination isn't set up yet.";
     return;
   }
   setBusy(true);
   msg.textContent = "Sending...";
 
-  fetch("https://formsubmit.co/ajax/" + encodeURIComponent(RSVP_EMAIL), {
+  // text/plain + no-cors keeps this a simple request, which Google Apps Script accepts from any site
+  fetch(RSVP_URL, {
     method: "POST",
-    headers: {"Content-Type": "application/json", "Accept": "application/json"},
-    body: JSON.stringify({
-      _subject: "RSVP: " + first + " " + last + " - " + (coming ? "YES" : "NO"),
-      _template: "table",
-      _captcha: "false",
-      "First name": first,
-      "Last name": last,
-      "Coming": coming ? "Yes" : "No"
-    })
+    mode: "no-cors",
+    headers: {"Content-Type": "text/plain;charset=utf-8"},
+    body: JSON.stringify({firstName: first, lastName: last, coming: coming})
   })
-  .then(function(r){ if (!r.ok) throw new Error("bad response"); })
   .then(function(){
     msg.className = "msg done";
     msg.textContent = coming
