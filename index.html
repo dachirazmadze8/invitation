@@ -11,23 +11,23 @@
 <main>
   <div class="first">
   <header class="intro">
-    <h1>You're invited!</h1>
+    <h1>გეპატიჟებით</h1>
     <svg class="arrow" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M12 4v15M5 12l7 7 7-7"/>
     </svg>
     <p>Scroll down</p>
   </header>
 
-  <img class="hero" src="spooky_shift.jpg" alt="Spooky Shift invitation">
+  <img class="hero" src="spooky shift.jpg" alt="Spooky Shift invitation">
   </div>
 
   <div class="content">
     <section aria-label="Countdown to the event">
       <div class="timer" id="timer" role="timer" aria-live="off">
-        <div class="unit"><b id="d">0</b><span>days</span></div>
-        <div class="unit"><b id="h">00</b><span>hours</span></div>
-        <div class="unit"><b id="m">00</b><span>minutes</span></div>
-        <div class="unit"><b id="s">00</b><span>seconds</span></div>
+        <div class="unit"><b id="d">0</b><span>დღეში</span></div>
+        <div class="unit"><b id="h">00</b><span>საათში</span></div>
+        <div class="unit"><b id="m">00</b><span>წუთში</span></div>
+        <div class="unit"><b id="s">00</b><span>წამში</span></div>
       </div>
       <div class="started" id="started">The event has started. See you there!</div>
     </section>
@@ -53,18 +53,18 @@
 
     <section class="rsvp" aria-label="RSVP">
       <div class="fields">
-        <label for="firstName">First name
+        <label for="firstName">სახელი
           <input type="text" id="firstName" autocomplete="given-name">
         </label>
-        <label for="lastName">Last name
+        <label for="lastName">გვარი
           <input type="text" id="lastName" autocomplete="family-name">
         </label>
       </div>
 
-      <p class="ask" id="ask">Are you coming to the event?</p>
+      <p class="ask" id="ask">მოდიხართ?</p>
       <div class="choices" role="group" aria-labelledby="ask">
-        <button type="button" class="yes" id="yes">Yes</button>
-        <button type="button" class="no" id="no">No</button>
+        <button type="button" class="yes" id="yes">დიახ</button>
+        <button type="button" class="no" id="no">არა</button>
       </div>
       <p class="msg" id="msg" role="status" aria-live="polite"></p>
     </section>

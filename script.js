@@ -1,11 +1,14 @@
 var EVENT_START = new Date("2026-10-30T10:00:00");
 var LOCATION = "თეგეტას სათავო ოფისი";
-var RSVP_URL = "https://script.google.com/macros/s/AKfycbz7zt0GY6szetGx8fUREdVZji5dDxm2lJ5Ohh3bqA66VPvZqBBh2mBBU4T9xlIcYZzK/exec";
+var RSVP_URL = "https://script.google.com/macros/s/AKfycbz7zt0GY6szetGx8fUREdVZji5dDxm2lJ5Ohh3bqA66VPvZqBBh2mBBU4T9xlIcYZzK/exec"; // your Google Apps Script web app address
 
 
 document.getElementById("place").textContent = LOCATION;
+var KA_DAYS = ["კვირა","ორშაბათი","სამშაბათი","ოთხშაბათი","ხუთშაბათი","პარასკევი","შაბათი"];
+var KA_MONTHS = ["იანვარი","თებერვალი","მარტი","აპრილი","მაისი","ივნისი","ივლისი","აგვისტო","სექტემბერი","ოქტომბერი","ნოემბერი","დეკემბერი"];
 document.getElementById("dateText").textContent =
-  EVENT_START.toLocaleDateString(undefined,{weekday:"long",year:"numeric",month:"long",day:"numeric"});
+  KA_DAYS[EVENT_START.getDay()] + ", " + EVENT_START.getDate() + " " +
+  KA_MONTHS[EVENT_START.getMonth()] + ", " + EVENT_START.getFullYear();
 document.getElementById("timeText").textContent =
   EVENT_START.toLocaleTimeString(undefined,{hour:"numeric",minute:"2-digit"});
 
