@@ -1,6 +1,6 @@
-var EVENT_START = new Date("2026-10-31T00:00:00");
-var LOCATION = "129 D.agmashenebeli alley";
-var RSVP_EMAIL = "razmadzedachi@gmail.com";
+var EVENT_START = new Date("2026-10-30T10:00:00");
+var LOCATION = "თეგეტას სათავო ოფისი";
+var RSVP_EMAIL = "tmikhelidze@gmail.com";
 
 
 document.getElementById("place").textContent = LOCATION;
