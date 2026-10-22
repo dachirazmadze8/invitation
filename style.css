@@ -252,6 +252,14 @@ dd {
   border-top: 0;
 }
 
+.schedule li small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
 .schedule .time {
   font-weight: 800;
   color: var(--accent);
